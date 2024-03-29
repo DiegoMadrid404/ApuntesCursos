@@ -1,0 +1,73 @@
+Teoria:
+
+- al crear un repositorio se crea:
+  staging: es un espacio en memoria donde guardo mis cambios esperando a ser enviados a mi repositorio (.git)
+  carpeta .git: es donde se almacena el repositorio
+- Al correrse el comeando add, se envia el archivo al staging esperando a que se envie al repositorio
+- con el comando commit se envia al repositorio, por defecto es nombrado master
+- merge: unir ramas
+- rama head: head significa que es la rama donde estoy parado
+= para salir del editor de mensajes esc shift Z Z 
+
+
+COMANDOS GIT configurar esto antes  de todo
+--------------
+Configurar git
+e3cdfv
+Ejecucion git
+-git init: crea el repositorio sobre la carpeta donde estoy
+-git status: ver el estado actual de mi repositorio, a ver que falta por proteger
+-git add archivo: sube un cambio a stage
+-git add .: sube todo lo que este en la carpeta
+-git rm archivo: quita un cambio  de stage
+-git commit -m "mensaje": deja un mensaje y hace commit
+-git commit -am "mensaje": deja un mensaje y añade cambios al stage, solo funciona con archivos que no sean nuevos sino hay que hacer git add primero
+-git show nombrearchivo: ver cambios del archivos
+-git log: (Pulsando la letra Q me salgo del log) ver el historial de commits (nos muestra el codigo de la version a donde podriamos volver)
+-git log --oneline: ver todos los commits rapido
+-git checkout rama . :Se actualiza la rama para revertir los camios realizados
+
+-git reglog: para ver todos los cambios y modificaciones y con eso me dice en que punt ode la historia puedo hacer el reset
+-git reset codigoVersion --soft: Borra el historial y los registros de Git de commits anteriores, pero guarda los cambios en Staging para aplicar las últimas actualizaciones a un nuevo commit.
+-git reset codigoVersion --hard: es el mas comun -Deshace todo, absolutamente todo. Toda la información de los commits y del área de staging se elimina del historial.
+-git reset codigoVersion --mixed: Borra todo, exactamente todo. Toda la información de los commits y del área de staging se elimina del historial.
+-git reset HEAD: El comando git reset saca archivos del área de staging sin borrarlos ni realizar otras acciones. Esto impide que los últimos cambios en estos archivos se envíen al último commit. Podemos incluirlos de nuevo en staging con git add si cambiamos de opinión. 
+-git diff: compara diferencias entre lo que tengo en staging y en memoria
+-git reset codigoLog  --hard/--soft : vuelve a una version anterior en el tiempo,
+-git checkout codigoCommitDelLog/Rama: permite cambiar de rama o log de la rama (para ver un commit anterior por ejemplo)
+-git show: Mostrara todos los cambios que hemos hecho, esto incluye las líneas que hemos cambiado, cuando y quien hizo dichos cambios.
+
+-git status: muestra en que rama estoy
+-git show: muestra mis ultimos cambios
+-git branch nombreRama: crea una nueva rama
+-git pull origin : trae y fusiona de un rpositorio remoto
+-git push : subir mis cambiosxsss
+-git merge rama: unir rama desde la principal para combinar con secundaria 
+-git rebase rama: actualiza la rama con otra
+-git remote add origin https://github.com/RUTA DE TU REPOSITORIO : publicar repositorio en github
+-git push -u origin master: Subir la rama a tu repositorio publicado
+-git remote -v: ver en donde esta alojado mi codigo
+-git branch -m: renombrar rama
+-git branch -d: eliminar rama
+-git log --all --graph --decorate --oneline : ver todos los cambios
+
+-git rebase rama2 : rebase es unir los una rama con otra, a diferencia del merge, es como si no hubiera tenido diferentes ramas sino que la segunda inicia donde termina la primera y se mantiene una sola linea
+ es como si la segunda rama no hubiera existido sino que solo qeuda una
+
+-git stash: guarda cambios en temporal."
+-git stash drop: borrar los stash
+-git stash pop: Volvé a donde estabas (el cambio post-commit vuelve al archivo)
+-git stash list: mira que tengo en el stash
+-git stash branch x: crea una rama con el stash
+-Git Clean --dry-run: muestra que archivos puedo eliminar del proyecto por ser no deseados
+-git clean -f: elimina los archivos que mne mosto 
+-Git cherry-pick hashDelCommitCopiadoDelLog :  une un commit especificoa una rama, le hace un merge de una vez (es una mala rama porque luego puede generar conflictos al fusionar la rama)
+-git commit --amend : agrega un cambio al ultimo commit que tengo en el stage
+-git "grep" -n palabra: busca una pabra en todo lado
+-git "grep" -c palabra: cuenta cuantas veces se repite una palaba
+
+
+--- obtener un proyecto ya creado 
+primero tener la carpeta y ubicarse en ella en consola
+-git clone rutadelrepositorio: obtener caperta del repositorio 
+

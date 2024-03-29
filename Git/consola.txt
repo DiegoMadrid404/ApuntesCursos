@@ -1,0 +1,21 @@
+
+COMANDOS CONSOLA
+--------------
+
+/: home
+~: carpeta del directorio
+- pwd: ver en que carpeta estoy
+- ls: muestra todos los archivos en la carpeta    
+- cd: ir a una carpeta
+- ls -al: mostrar todos los archivos con los ocultos
+- mkdir: crear carpeta
+- touch: Crear archivos
+- cat: ver contenido de un archivos
+- history: ver historia de los comandos que escribi
+- rm borrar archivos
+- code nombrearchivo/. : abre en vs code 
+- touch nimbrearchivo: crea un archivo
+- pwd: ver en que ruta estoy
+--------------
+
+
